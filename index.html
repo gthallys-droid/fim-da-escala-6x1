@@ -32,7 +32,7 @@ footer a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
-<div class="site-h"><a href="#">Fim da escala 6x1</a></div>
+<div class="site-h"><a href="#">Fim da escala 6x1</a><nav aria-label="Menu"><a href="#sobre">Sobre</a><a href="#contato">Contato</a><a href="#privacidade">Privacidade</a><a href="#termos">Termos</a></nav></div>
 <div class="wrap">
 <main id="home">
 <style>
@@ -84,15 +84,23 @@ footer a:hover{text-decoration:underline}
 #fim6 #cdw .seg button{position:relative;display:block;flex:0 1 auto;min-width:0;height:auto;margin:0;line-height:1.25;white-space:nowrap;text-shadow:none;text-indent:0;letter-spacing:0;padding:8px 14px;text-align:center}
 #fim6 #cdw .seg button::before,#fim6 #cdw .seg button::after{content:none!important;display:none!important}
 @media(max-width:400px){#fim6 #cdw .seg button{padding:8px 10px;font-size:.78rem}}
-/* ===== Desktop: aproveitar melhor a largura (celular não muda) ===== */
+/* ===== Desktop: layout largo e profissional (celular não muda) ===== */
 @media(min-width:900px){
-.wrap,.site-h,footer{max-width:1180px}
-#fim6{max-width:1120px}
-#fim6 #cdw,#fim6 #c6x1,#fim6 #c5x2{max-width:960px}
+:root{--W:1200px;--F:1160px;--C:1000px}
+.wrap{max-width:var(--W);padding-top:22px}
+#fim6{max-width:var(--F)}
+#fim6 #cdw,#fim6 #c6x1,#fim6 #c5x2{max-width:var(--C)}
 #fim6 .hs{max-width:72ch}
-.adslot{max-width:1120px}
+.adslot{max-width:var(--F)}
 .pg{max-width:860px;margin-left:auto;margin-right:auto}
+.site-h{max-width:none;display:flex;align-items:center;justify-content:space-between;background:#fff;border-bottom:1px solid #d9e3ee;padding:16px max(16px,calc((100% - var(--W))/2 + 12px));font-size:1.08rem}
+.site-h nav{display:flex;gap:26px;font-size:.92rem;font-weight:600}
+.site-h nav a{color:#55627a}.site-h nav a:hover{color:#0b5d8a}
+footer{max-width:none;margin-top:24px;background:#fff;border-top:1px solid #d9e3ee;padding-left:16px;padding-right:16px}
 }
+@media(min-width:1280px){:root{--W:1360px;--F:1320px;--C:1160px}}
+@media(min-width:1600px){:root{--W:1520px;--F:1480px;--C:1240px}}
+@media(max-width:899px){.site-h nav{display:none}}
 /* ===== Anúncios ===== */
 .adslot{width:100%;max-width:780px;margin:0 auto;min-height:100px;text-align:center;overflow:hidden}
 .adslot::before{content:"Publicidade";display:block;font:600 .68rem/1.6 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#7b8798}
