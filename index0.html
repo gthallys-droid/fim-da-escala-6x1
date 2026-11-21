@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fim da escala 6x1: calculadoras e simulador | EC 141/2026</title>
+<meta name="description" content="Calculadoras gratuitas sobre o fim da escala 6x1 (EC 141/2026): contagem regressiva, valor da hora e simulador de horário.">
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6577857913707933" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#e9f0f7;color:#12233d;font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:14px 12px 28px}
+.site-h{max-width:820px;margin:0 auto;padding:14px 16px 0;font-weight:800;letter-spacing:-.01em}
+.site-h a{color:#12233d;text-decoration:none}
+#home{display:flex;flex-direction:column;gap:18px}
+.pg{background:#fff;border:1px solid #d9e3ee;border-radius:16px;padding:clamp(18px,5vw,36px);line-height:1.7;font-size:1rem}
+.pg h1{margin:0 0 6px;font-size:clamp(1.5rem,5.5vw,2rem);line-height:1.2}
+.pg h2{margin:26px 0 6px;font-size:1.15rem}
+.pg p{margin:0 0 12px}.pg ul{margin:0 0 12px;padding-left:1.2em}.pg li{margin-bottom:6px}
+.pg a{color:#0b5d8a}.upd{color:#55627a;font-size:.88rem}
+.pg label{display:block;font-weight:700;font-size:.9rem;margin:14px 0 4px}
+.pg input,.pg textarea{width:100%;font:inherit;padding:10px 12px;border:1.5px solid #c5d0de;border-radius:8px}
+.pg button{margin-top:16px;width:100%;font:inherit;font-weight:700;padding:12px;border:0;border-radius:8px;background:#0b5d8a;color:#fff;cursor:pointer}
+.pg .hint{font-size:.85rem;color:#55627a;margin:8px 0 0}.pg .err{color:#a32020;font-size:.9rem;min-height:1.2em;margin-top:8px}
+.cfg-resp,.cfg-mail{overflow-wrap:anywhere}
+.back{display:inline-block;margin-bottom:12px;color:#0b5d8a;font-weight:700;text-decoration:none}
+footer{max-width:820px;margin:8px auto 0;padding:20px 16px 36px;text-align:center;font-size:.9rem;color:#55627a;line-height:1.7}
+footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;margin-bottom:10px}
+footer a{color:#0b5d8a;font-weight:600;text-decoration:none;padding:6px 2px}
+footer a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="site-h"><a href="#">Fim da escala 6x1</a><nav aria-label="Menu"><a href="#sobre">Sobre</a><a href="#contato">Contato</a><a href="#privacidade">Privacidade</a><a href="#termos">Termos</a></nav></div>
+<div class="wrap">
+<main id="home">
+<style>
+#fim6{--ink:#12233d;--mut:#55627a;--acc:#0b5d8a;position:relative;max-width:780px;margin:0 auto;padding:clamp(14px,4.5vw,34px);border-radius:20px;overflow:hidden;box-sizing:border-box;display:flex;flex-direction:column;gap:clamp(16px,3.5vw,26px);font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;border:1px solid #d9e3ee;
+  background:
+    radial-gradient(760px 340px at 8% -6%,rgba(11,93,138,.20),transparent 62%),
+    radial-gradient(620px 300px at 104% 2%,rgba(36,126,196,.14),transparent 58%),
+    radial-gradient(circle at 1px 1px,rgba(18,35,61,.085) 1px,transparent 0) 0 0/22px 22px,
+    linear-gradient(180deg,#eaf2f9 0%,#f6f9fc 55%,#f1f6fb 100%)}
+#fim6 *{box-sizing:border-box}
+#fim6 .hero{padding:4px 2px 2px}
+#fim6 .hk{margin:0 0 10px;font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+#fim6 .ht{margin:0;font-size:clamp(1.6rem,5.6vw,2.45rem);font-weight:800;line-height:1.14;letter-spacing:-.025em;color:var(--ink)}
+#fim6 .hs{margin:12px 0 0;max-width:56ch;font-size:clamp(.95rem,2.6vw,1.05rem);line-height:1.55;color:var(--mut)}
+#fim6 .trust{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+#fim6 .trust li{display:inline-flex;align-items:center;gap:6px;margin:0;padding:6px 12px 6px 10px;font-size:.8rem;font-weight:600;color:var(--ink);background:rgba(255,255,255,.85);border:1px solid #cfdbe8;border-radius:999px}
+#fim6 .trust svg{color:#1d7a4b;flex:none}
+#fim6 #cdw,#fim6 #c6x1,#fim6 #c5x2{margin:0 auto;width:100%}
+#fim6 #c6x1,#fim6 #c5x2{border:1px solid #d5dde8;border-top:5px solid #0b5d8a;border-radius:12px;box-shadow:0 6px 22px rgba(18,35,61,.08)}
+#fim6 #cdw .card{box-shadow:0 6px 22px rgba(18,35,61,.10)}
+#fim6 #c6x1 h2,#fim6 #c5x2 h2{font-size:1.4rem;font-weight:800;letter-spacing:-.02em;color:#12233d}
+#fim6 #c6x1 input[type=number],#fim6 #c6x1 input[type=date],#fim6 #c6x1 input[type=text],#fim6 #c5x2 .grp input[type=time],#fim6 #c5x2 .grp input[type=number],#fim6 #c5x2 .grp select{border-radius:8px;border-width:1.5px;border-color:#c5d0de}
+#fim6 #c6x1 button,#fim6 #c5x2 button{border-radius:8px;letter-spacing:.01em}
+#fim6 #c6x1 .note,#fim6 #c5x2 .note{line-height:1.5}
+
+/* ===== Correções de layout (texto sobreposto/cortado) ===== */
+#fim6 #cdw .clk{grid-template-columns:repeat(4,minmax(0,1fr))}
+#fim6 #cdw .u{min-width:0;overflow:hidden}
+#fim6 #cdw .u b{font-size:clamp(1.3rem,7vw,2.7rem);line-height:1.15;white-space:nowrap}
+#fim6 #cdw .u span{white-space:nowrap;letter-spacing:.04em}
+#fim6 #cdw .tlw{height:54px;margin:38px 16px 6px}
+#fim6 #cdw .ti,#fim6 #cdw .sb{overflow-wrap:anywhere}
+#fim6 #cdw .cta{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:560px){#fim6 #cdw .cta{grid-template-columns:minmax(0,1fr)}}
+#fim6 #cdw a.btn{min-width:0;flex-wrap:nowrap;padding:12px 14px}
+#fim6 #cdw a.btn span{flex:1 1 auto;min-width:0;white-space:normal;overflow-wrap:anywhere}
+@media(max-width:560px){#fim6 #cdw a.btn svg:last-child{display:none}}
+/* ===== Notas legíveis ===== */
+#fim6 #cdw .src,#fim6 #c6x1 .note,#fim6 #c5x2 .note{font-size:.88rem;line-height:1.65}
+#fim6 #cdw .src p,#fim6 #c6x1 .note p,#fim6 #c5x2 .note p{margin:0 0 6px}
+#fim6 #cdw .src ul,#fim6 #c6x1 .note ul,#fim6 #c5x2 .note ul{margin:0;padding-left:1.2em}
+#fim6 #cdw .src li,#fim6 #c6x1 .note li,#fim6 #c5x2 .note li{margin:0 0 5px}
+/* ===== Título do topo e pílulas: texto único, sem sobreposição ===== */
+#fim6 .hero{display:block;position:relative}
+#fim6 .hero .ht{display:block;position:static;float:none;height:auto;max-height:none;overflow:visible;margin:0;text-shadow:none;filter:none;background:none;-webkit-text-fill-color:currentColor;white-space:normal;overflow-wrap:break-word;line-height:1.2}
+#fim6 .hero .ht::before,#fim6 .hero .ht::after{content:none!important;display:none!important}
+#fim6 #cdw .top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;min-width:0}
+#fim6 #cdw .seg{display:inline-flex;flex-wrap:nowrap;max-width:100%;position:relative}
+#fim6 #cdw .seg button{position:relative;display:block;flex:0 1 auto;min-width:0;height:auto;margin:0;line-height:1.25;white-space:nowrap;text-shadow:none;text-indent:0;letter-spacing:0;padding:8px 14px;text-align:center}
+#fim6 #cdw .seg button::before,#fim6 #cdw .seg button::after{content:none!important;display:none!important}
+@media(max-width:400px){#fim6 #cdw .seg button{padding:8px 10px;font-size:.78rem}}
+/* ===== Desktop: layout largo e profissional (celular não muda) ===== */
+@media(min-width:900px){
+:root{--W:1200px;--F:1160px;--C:1000px}
+.wrap{max-width:var(--W);padding-top:22px}
+#fim6{max-width:var(--F)}
+#fim6 #cdw,#fim6 #c6x1,#fim6 #c5x2{max-width:var(--C)}
+#fim6 .hs{max-width:72ch}
+.adslot{max-width:var(--F)}
+.pg{max-width:860px;margin-left:auto;margin-right:auto}
+.site-h{max-width:none;display:flex;align-items:center;justify-content:space-between;background:#fff;border-bottom:1px solid #d9e3ee;padding:16px max(16px,calc((100% - var(--W))/2 + 12px));font-size:1.08rem}
+.site-h nav{display:flex;gap:26px;font-size:.92rem;font-weight:600}
+.site-h nav a{color:#55627a}.site-h nav a:hover{color:#0b5d8a}
+footer{max-width:none;margin-top:24px;background:#fff;border-top:1px solid #d9e3ee;padding-left:16px;padding-right:16px}
+}
+@media(min-width:1280px){:root{--W:1360px;--F:1320px;--C:1160px}}
+@media(min-width:1600px){:root{--W:1520px;--F:1480px;--C:1240px}}
+@media(max-width:899px){.site-h nav{display:none}}
+/* ===== Anúncios ===== */
+.adslot{width:100%;max-width:780px;margin:0 auto;min-height:100px;text-align:center;overflow:hidden}
+.adslot::before{content:"Publicidade";display:block;font:600 .68rem/1.6 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#7b8798}
+</style>
+<div class="adslot" aria-label="Publicidade">
+<!-- ESPAÇO PARA ANÚNCIO ADSENSE -->
+<!-- (TOPO) Para ativar um bloco manual, crie uma unidade no AdSense e cole aqui:
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6577857913707933" data-ad-slot="SEU_ID_DO_BLOCO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> -->
+</div>
+<div id="fim6">
+<header class="hero">
+  <p class="hk">Fim da escala 6x1 · EC 141/2026</p>
+  <h2 class="ht">Veja como a nova jornada muda o seu horário e a sua hora de trabalho</h2>
+  <p class="hs">Ferramentas gratuitas, feitas com base no texto da Emenda Constitucional 141/2026, para você entender o que muda na sua rotina.</p>
+  <ul class="trust"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Baseado na EC 141/2026</li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Sem cadastro</li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Cálculo no seu aparelho</li></ul>
+</header>
+<div id="cdw">
+<style>
+#cdw{--ink:#1b2a41;--mut:#5b6678;--line:#d5dbe5;--soft:#f1f4f9;--acc:#0b5d8a;max-width:700px;margin:0 auto 28px;box-sizing:border-box;color:var(--ink);font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+#cdw *{box-sizing:border-box}
+#cdw .card{background:#fff;border:1px solid var(--line);border-top:5px solid var(--acc);border-radius:8px;padding:clamp(16px,4vw,26px);box-shadow:0 2px 10px rgba(27,42,65,.06)}
+#cdw .top{display:flex;justify-content:space-between;align-items:center;gap:10px 14px;flex-wrap:wrap}
+#cdw .kk{margin:0;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+#cdw .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--soft)}
+#cdw .seg button{font:inherit;font-size:.82rem;font-weight:700;color:var(--mut);background:transparent;border:0;padding:7px 16px;cursor:pointer;margin:0;width:auto;border-radius:0}
+#cdw .seg button.on{background:var(--acc);color:#fff}
+#cdw .seg button:hover:not(.on){background:#e3e9f1}
+#cdw .seg button:focus-visible{outline:3px solid var(--acc);outline-offset:-3px}
+#cdw .ti{margin:18px 0 2px;letter-spacing:-.015em;font-size:clamp(1.2rem,4.6vw,1.6rem);font-weight:700;line-height:1.25}
+#cdw .sb{margin:0 0 14px;font-size:.92rem;color:var(--mut)}
+#cdw .clk{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+#cdw .u{text-align:center;padding:clamp(10px,3vw,16px) 2px}
+#cdw .u+.u{border-left:1px solid var(--line)}
+#cdw .u b{display:block;font-size:clamp(1.7rem,8vw,3rem);font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+#cdw .u.s b{color:var(--acc)}
+#cdw .u span{display:block;margin-top:2px;font-size:clamp(.62rem,2.5vw,.74rem);font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--mut)}
+#cdw .tlw{position:relative;height:46px;margin:30px 14px 4px}
+#cdw .trk{position:absolute;left:0;right:0;top:21px;height:6px;border-radius:3px;background:#dfe5ee}
+#cdw .pf{position:absolute;left:0;top:0;height:100%;width:0;border-radius:3px;background:var(--acc)}
+#cdw .mk{position:absolute;top:16px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:#fff;border:3px solid #aab4c3}
+#cdw .mk.ok{border-color:var(--acc);background:var(--acc)}
+#cdw .mk.sel{box-shadow:0 0 0 5px rgba(11,93,138,.22)}
+#cdw .ml{position:absolute;top:36px;transform:translateX(-50%);font-size:.74rem;font-weight:700;color:var(--mut);white-space:nowrap}
+#cdw .hj{position:absolute;top:-2px;transform:translateX(-50%);font-size:.68rem;font-weight:700;color:#fff;background:var(--ink);border-radius:4px;padding:1px 7px;white-space:nowrap}
+#cdw .hj::after{content:"";position:absolute;left:50%;bottom:-4px;margin-left:-4px;border:4px solid transparent;border-top-color:var(--ink);border-bottom:0}
+@media(prefers-reduced-motion:no-preference){#cdw .pf{transition:width .6s ease}}
+#cdw .lg{margin:6px 0 0;font-size:.76rem;color:var(--mut);text-align:center}
+#cdw .fx{display:grid;grid-template-columns:repeat(3,1fr);margin-top:16px;border-top:1px solid var(--line)}
+@media(max-width:560px){#cdw .fx{grid-template-columns:1fr}}
+#cdw .fx div{padding:12px 14px 0 0}
+#cdw .fx div+div{padding-left:14px;border-left:1px solid var(--line)}
+@media(max-width:560px){#cdw .fx div+div{border-left:0;padding-left:0}}
+#cdw .fx b{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)}
+#cdw .fx span{display:block;margin-top:2px;font-size:.86rem;line-height:1.4}
+#cdw .src{margin:14px 0 0;font-size:.74rem;line-height:1.4;color:var(--mut)}
+#cdw .cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+@media(max-width:560px){#cdw .cta{grid-template-columns:1fr}}
+#cdw a.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:10px 16px;border:2px solid var(--acc);border-radius:8px;font-size:.95rem;font-weight:700;line-height:1.2;text-align:center;text-decoration:none;cursor:pointer}
+#cdw a.btn.p{background:var(--acc);color:#fff}
+#cdw a.btn.p:hover{background:#094a6e;border-color:#094a6e;color:#fff}
+#cdw a.btn.s{background:#fff;color:var(--acc)}
+#cdw a.btn.s:hover{background:#eaf3f9;color:var(--acc)}
+#cdw a.btn:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+#cdw a.btn svg{flex:none}
+#cdw .ctn{margin:8px 0 0;font-size:.78rem;color:var(--mut);text-align:center}
+#c6x1,#c5x2{scroll-margin-top:90px}
+@media(prefers-reduced-motion:no-preference){#c6x1,#c5x2{transition:box-shadow .4s}}
+</style>
+<div class="card" id="cd-card" role="region" aria-label="Contagem regressiva das etapas do fim da escala 6x1">
+  <div class="top">
+    <p class="kk">Contagem regressiva · EC 141/2026</p>
+    <div class="seg"><button type="button" id="cd-b0" aria-pressed="true">Etapa 1 · 42 h</button><button type="button" id="cd-b1" aria-pressed="false">Etapa 2 · 40 h</button></div>
+  </div>
+  <h2 class="ti" id="cd-ti"></h2>
+  <p class="sb" id="cd-sb"></p>
+  <div class="clk">
+    <div class="u"><b id="cd-d">00</b><span>dias</span></div>
+    <div class="u"><b id="cd-h">00</b><span>horas</span></div>
+    <div class="u"><b id="cd-m">00</b><span>minutos</span></div>
+    <div class="u s"><b id="cd-s">00</b><span>segundos</span></div>
+  </div>
+  <div class="tlw" aria-hidden="true">
+    <div class="trk"><div class="pf" id="cd-pf"></div></div>
+    <div class="mk" id="cd-k0" style="left:0%"></div><div class="ml" style="left:0%">44h</div>
+    <div class="mk" id="cd-k1"></div><div class="ml" id="cd-l1">42h</div>
+    <div class="mk" id="cd-k2" style="left:100%"></div><div class="ml" style="left:100%">40h</div>
+    <div class="hj" id="cd-hj">hoje</div>
+  </div>
+  <p class="lg">16/10/2026 promulgação · 16/12/2026 etapa 1 · 16/12/2027 etapa 2</p>
+  <div class="cta">
+    <a class="btn p" id="cd-a0" href="#c6x1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8.5 7h7M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 16h.01M12 16h.01M15.5 16h.01"/></svg><span>Calcular o valor da hora</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+    <a class="btn s" id="cd-a1" href="#c5x2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Simular meu horário e escala</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+  </div>
+  <p class="ctn">Gratuito, sem cadastro. Os valores digitados ficam no seu aparelho.</p>
+  <div class="fx">
+    <div><b>Descanso</b><span>2 dias por semana, um deles preferencialmente no domingo.</span></div>
+    <div><b>Salário</b><span>Sem redução, nem nos pisos salariais.</span></div>
+    <div><b>Já trabalha 40 h ou menos?</b><span>A jornada não diminui, mas passa a valer o segundo repouso.</span></div>
+  </div>
+  <div class="src"><p><b>Fonte:</b> Emenda Constitucional 141/2026 (arts. 1º, 2º, 4º e 6º).</p><ul><li>Algumas categorias têm regras próprias por lei ou acordo coletivo.</li><li>A contagem usa o horário de Brasília.</li><li>Ela depende do relógio do seu aparelho.</li></ul></div>
+</div>
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var T0=Date.UTC(2026,9,16,3,0,0),ST=[Date.UTC(2026,11,16,3,0,0),Date.UTC(2027,11,16,3,0,0)];
+  var TI=["Etapa 1 · limite de 42 horas por semana","Etapa 2 · limite de 40 horas por semana"];
+  var DT=["16/12/2026","16/12/2027"];
+  var cur=Date.now()<ST[0]?0:1,hover=false,manual=false;
+  var red=typeof window!=="undefined"&&window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var p1=(ST[0]-T0)/(ST[1]-T0)*100;
+  $("cd-k1").style.left=p1+"%";$("cd-l1").style.left=p1+"%";
+  function pad(n){return n<10?"0"+n:String(n)}
+  function render(){
+    var now=Date.now(),diff=ST[cur]-now,past=diff<0;if(past)diff=-diff;
+    var s=Math.floor(diff/1000);
+    $("cd-d").textContent=pad(Math.floor(s/86400));
+    $("cd-h").textContent=pad(Math.floor(s%86400/3600));
+    $("cd-m").textContent=pad(Math.floor(s%3600/60));
+    $("cd-s").textContent=pad(s%60);
+    $("cd-sb").textContent=past?"Em vigor desde "+DT[cur]+" · há":"Começa em "+DT[cur]+" · faltam";
+    var p=Math.max(0,Math.min(1,(now-T0)/(ST[1]-T0)))*100;
+    $("cd-pf").style.width=p+"%";$("cd-hj").style.left=p+"%";
+    $("cd-k1").className="mk"+(now>=ST[0]?" ok":"")+(cur===0?" sel":"");
+    $("cd-k2").className="mk"+(now>=ST[1]?" ok":"")+(cur===1?" sel":"");
+  }
+  function sel(i){
+    cur=i;$("cd-ti").textContent=TI[i];
+    for(var k=0;k<2;k++){$("cd-b"+k).setAttribute("aria-pressed",k===i?"true":"false");$("cd-b"+k).className=k===i?"on":""}
+    render();
+  }
+  $("cd-k0").className="mk ok";
+  [0,1].forEach(function(k){
+    var b=$("cd-b"+k);
+    b.addEventListener("mouseenter",function(){sel(k)});
+    b.addEventListener("focus",function(){sel(k)});
+    b.addEventListener("click",function(){manual=true;sel(k)});
+  });
+  var card=$("cd-card");
+  card.addEventListener("mouseenter",function(){hover=true});
+  card.addEventListener("mouseleave",function(){hover=false});
+  card.addEventListener("focusin",function(){hover=true});
+  card.addEventListener("focusout",function(){hover=false});
+  function go(id,foco){
+    var tg=$(id);if(!tg)return;
+    tg.scrollIntoView({behavior:red?"auto":"smooth",block:"start"});
+    setTimeout(function(){var f=$(foco);if(f){try{f.focus({preventScroll:true})}catch(e){f.focus()}}},red?0:550);
+    tg.style.boxShadow="0 0 0 4px rgba(11,93,138,.3)";
+    setTimeout(function(){tg.style.boxShadow=""},1900);
+  }
+  [["cd-a0","c6x1","c6-s"],["cd-a1","c5x2","c5-esc"]].forEach(function(a){
+    $(a[0]).addEventListener("click",function(e){if(e.preventDefault)e.preventDefault();go(a[1],a[2])});
+  });
+  sel(cur);
+  setInterval(render,1000);
+  setInterval(function(){if(!hover&&!manual&&!red)sel(1-cur)},7000);
+})();
+</script>
+</div>
+
+<div id="c6x1">
+<style>
+#c6x1{--ink:#1b2a41;--mut:#5b6678;--line:#d5dbe5;--soft:#f1f4f9;--acc:#0b5d8a;--warn:#8a5a00;font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:6px;max-width:700px;margin:0 auto;padding:clamp(16px,4vw,28px);line-height:1.5;box-sizing:border-box}
+#c6x1 *{box-sizing:border-box}
+#c6x1 h2{font-size:1.35rem;margin:0 0 4px}
+#c6x1 .sub{margin:0 0 14px;color:var(--mut);font-size:.95rem}
+#c6x1 .g{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+@media(max-width:520px){#c6x1 .g{grid-template-columns:1fr}}
+#c6x1 label{display:block;font-weight:700;font-size:.9rem;margin:12px 0 4px}
+#c6x1 input[type=number],#c6x1 input[type=date],#c6x1 input[type=text]{width:100%;font:inherit;font-size:1rem;padding:10px 12px;border:1px solid var(--line);border-radius:4px;color:var(--ink);background:#fff}
+#c6x1 .ck{display:flex;gap:8px;align-items:flex-start;font-weight:400;font-size:.88rem;margin-top:14px}
+#c6x1 .ck input{margin-top:4px}
+#c6x1 input:focus,#c6x1 button:focus-visible{outline:3px solid var(--acc);outline-offset:1px}
+#c6x1 button{margin-top:16px;width:100%;font:inherit;font-weight:700;font-size:1rem;padding:12px;border:0;border-radius:4px;background:var(--acc);color:#fff;cursor:pointer}
+#c6x1 button:hover{background:#094a6e}
+#c6x1 .err{color:#a32020;font-size:.9rem;min-height:1.2em;margin-top:8px}
+#c6x1 .cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+#c6x1 .card{background:var(--soft);border-radius:4px;padding:10px 12px}
+#c6x1 .card small{display:block;color:var(--mut);font-size:.8rem}
+#c6x1 .card b{font-size:1.2rem}
+#c6x1 .exp{margin-top:12px;font-size:.92rem}
+#c6x1 .aviso{margin-top:12px;border-left:4px solid var(--warn);background:#fff8e8;padding:10px 12px;font-size:.85rem}
+#c6x1 .fase{background:var(--soft);border-left:4px solid var(--acc);padding:10px 12px;font-size:.9rem;margin:0 0 14px}
+#c6x1 .note{font-size:.8rem;color:var(--mut);margin-top:16px;border-top:1px solid var(--line);padding-top:10px}
+</style>
+
+<h2>Calculadora do fim da escala 6x1</h2>
+<p class="sub">Escolha uma data e veja o limite de jornada, o valor da sua hora e as horas extras, conforme a Emenda Constitucional 141/2026.</p>
+<div class="fase" id="c6-fase"></div>
+
+<div class="g">
+  <div><label for="c6-d">Data de referência</label><input id="c6-d" type="date" value="2026-12-16"></div>
+  <div><label for="c6-s">Salário mensal (R$)</label><input id="c6-s" type="text" inputmode="decimal" autocomplete="off" placeholder="0,00"></div>
+  <div><label for="c6-c">Jornada semanal do contrato (horas)</label><input id="c6-c" type="number" inputmode="decimal" min="1" max="60" step="0.5" value="44"></div>
+  <div><label for="c6-t">Horas trabalhadas por semana</label><input id="c6-t" type="number" inputmode="decimal" min="1" max="80" step="0.5" value="44"></div>
+</div>
+<label class="ck"><input id="c6-dip" type="checkbox"> Tenho diploma de nível superior e remuneração mensal de R$ 21.188,88 ou mais (2,5 vezes o teto do INSS de 2026, de R$ 8.475,55)</label>
+
+<button type="button" id="c6-go">Calcular</button>
+<div class="err" id="c6-err" role="alert"></div>
+<div id="c6-res" aria-live="polite"></div>
+
+<div class="note"><p><b>Estimativa informativa</b>, baseada na EC 141/2026 (promulgada em 16/10/2026).</p><ul><li>Considera a decisão do ministro Flávio Dino nas ADIs 8.041 e 8.042 (12/11/2026).</li><li>Essa decisão está sujeita a referendo do plenário do STF.</li><li>O julgamento foi levado ao plenário presencial em 14/11/2026, sem data marcada.</li><li>O resultado pode mudar com a regulamentação.</li><li>Valor da hora = salário ÷ (limite semanal × 5). É o divisor que a prática trabalhista tem adotado (220, 210 e 200).</li><li>A regulamentação ou a Justiça do Trabalho podem discutir outros critérios.</li><li>Hora extra com adicional mínimo de 50%.</li><li>Acordos coletivos e regimes especiais podem mudar o resultado.</li><li>Não substitui orientação de contador, sindicato ou advogado trabalhista.</li><li>Os valores são calculados no seu navegador e não são enviados a ninguém.</li></ul></div>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var hj=new Date(),ymd=hj.getFullYear()+"-"+("0"+(hj.getMonth()+1)).slice(-2)+"-"+("0"+hj.getDate()).slice(-2);
+  $("c6-d").value=ymd>"2026-12-16"?ymd:"2026-12-16";
+  $("c6-fase").textContent=ymd<"2026-12-16"?"Hoje ainda vale o limite de 44 horas. A nova regra começa em 16/12/2026, com limite de 42 horas e dois dias de repouso.":(ymd<"2027-12-16"?"Em vigor desde 16/12/2026: limite de 42 horas semanais e dois dias de repouso. A fase de 40 horas começa em 16/12/2027.":"Em vigor desde 16/12/2027: limite de 40 horas semanais e dois dias de repouso.");
+  var brl=function(v){return v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"})};
+  function limite(d){return d<"2026-12-16"?44:(d<"2027-12-16"?42:40)}
+  function calc(){
+    var err=$("c6-err"),res=$("c6-res");err.textContent="";res.innerHTML="";
+    var d=$("c6-d").value,s=parseFloat($("c6-s").value.replace(/\./g,"").replace(",",".")),c=parseFloat($("c6-c").value),t=parseFloat($("c6-t").value);
+    if(!d){err.textContent="Informe a data de referência.";return}
+    if(!(s>0)){err.textContent="Informe um salário mensal maior que zero.";return}
+    if(!(c>0)||!(t>0)){err.textContent="Informe a jornada do contrato e as horas trabalhadas.";return}
+    var lim=limite(d),jc=Math.min(c,lim),novo=d>="2026-12-16";
+    var hora=s/(jc*5),hOld=s/(c*5);
+    var ext=Math.max(0,t-lim),extSem=ext*hora*1.5,extMes=extSem*52/12;
+    var h='<div class="cards">'+
+      '<div class="card"><small>Limite semanal na data</small><b>'+lim+' horas</b></div>'+
+      '<div class="card"><small>Repouso semanal remunerado</small><b>'+(novo?"2 dias":"1 dia (regra anterior)")+'</b></div>'+
+      '<div class="card"><small>Valor da hora normal</small><b>'+brl(hora)+'</b></div>'+
+      '<div class="card"><small>Horas extras por semana</small><b>'+String(ext).replace(".",",")+' h</b></div></div>';
+    var e='<p class="exp">';
+    if(c>lim){e+="O contrato de "+c+" horas passa a "+lim+" horas, sem redução de salário. A hora sobe de "+brl(hOld)+" para "+brl(hora)+". "}
+    else{e+="Seu contrato já está dentro do limite, então o valor da hora não muda ("+brl(hora)+"). "}
+    if(ext>0){e+="As "+String(ext).replace(".",",")+" horas além do limite valem "+brl(extSem)+" por semana (cerca de "+brl(extMes)+" por mês), com adicional de 50%."}
+    else{e+="Você não tem horas extras nessa jornada."}
+    e+="</p>";
+    var a="";
+    if(d>="2026-12-16"&&d<"2027-12-16"){a+='<div class="aviso">Pela decisão do ministro Dino de 12/11/2026 (sujeita a referendo do plenário), na falta de acordo coletivo até 15/12/2026 as 42 horas podem ser distribuídas em 5 dias de até 8h24, sem adicional sobre os 24 minutos acima de 8 horas. Confirme com seu sindicato ou empregador.</div>'}
+    if($("c6-dip").checked){a+='<div class="aviso">Pelo art. 8º da emenda, quem tem diploma superior e remuneração igual ou superior a 2,5 vezes o teto do INSS não fica sujeito às regras de duração do trabalho e de controle de jornada, salvo por liberalidade do empregador ou previsão em acordo ou convenção coletiva, respeitado o descanso semanal. Este cálculo de limite e de horas extras pode não se aplicar ao seu caso.</div>'}
+    if(d<"2026-12-16"){a+='<div class="aviso">Antes de 16/12/2026 vale a regra anterior (44 horas semanais).</div>'}
+    res.innerHTML=h+e+a;
+  }
+  var sal=$("c6-s");
+  function mascara(v){
+    var d=v.replace(/\D/g,"").replace(/^0+/,"").slice(0,11);
+    if(!d)return "";
+    while(d.length<3)d="0"+d;
+    var cent=d.slice(-2),int=d.slice(0,-2).replace(/\B(?=(\d{3})+(?!\d))/g,".");
+    return int+","+cent;
+  }
+  sal.addEventListener("input",function(){
+    sal.value=mascara(sal.value);
+    sal.setSelectionRange(sal.value.length,sal.value.length);
+  });
+  $("c6-go").addEventListener("click",calc);
+})();
+</script>
+</div>
+
+<div class="adslot" aria-label="Publicidade">
+<!-- ESPAÇO PARA ANÚNCIO ADSENSE -->
+<!-- (MEIO, entre as calculadoras) Para ativar um bloco manual, crie uma unidade no AdSense e cole aqui:
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6577857913707933" data-ad-slot="SEU_ID_DO_BLOCO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> -->
+</div>
+<div id="c5x2">
+<style>
+#c5x2{--ink:#1b2a41;--mut:#5b6678;--line:#d5dbe5;--soft:#f1f4f9;--acc:#0b5d8a;--warn:#8a5a00;font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:6px;max-width:700px;margin:28px auto 0;padding:clamp(16px,4vw,28px);line-height:1.5;box-sizing:border-box}
+#c5x2 *{box-sizing:border-box}
+#c5x2 [hidden]{display:none}
+#c5x2 h2{font-size:1.35rem;margin:0 0 4px}
+#c5x2 h3{font-size:1rem;margin:0 0 2px}
+#c5x2 .sub{margin:0 0 14px;color:var(--mut);font-size:.95rem}
+#c5x2 .sws{display:flex;flex-direction:column;gap:12px;margin:6px 0 4px}
+#c5x2 .sw{display:flex;align-items:center;gap:12px;cursor:pointer;font-weight:700;font-size:.95rem;margin:0;position:relative}
+#c5x2 .sw input{position:absolute;opacity:0;width:46px;height:26px;margin:0;padding:0;border:0;cursor:pointer}
+#c5x2 .trk{flex:none;width:46px;height:26px;border-radius:13px;background:#c3c9d3;position:relative;transition:background .15s}
+#c5x2 .trk::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .15s}
+#c5x2 .sw input:checked+.trk{background:var(--acc)}
+#c5x2 .sw input:checked+.trk::after{transform:translateX(20px)}
+#c5x2 .sw input:focus-visible+.trk{outline:3px solid var(--acc);outline-offset:2px}
+#c5x2 .grp{border:1px solid var(--line);border-radius:4px;padding:12px 14px 14px;margin-top:12px}
+#c5x2 .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 12px}
+@media(max-width:560px){#c5x2 .g3{grid-template-columns:1fr}}
+#c5x2 label{display:block;font-weight:700;font-size:.88rem;margin:10px 0 4px}
+#c5x2 .grp input,#c5x2 .grp select{width:100%;font:inherit;font-size:1rem;padding:10px 12px;border:1px solid var(--line);border-radius:4px;color:var(--ink);background:#fff}
+#c5x2 input:focus,#c5x2 select:focus,#c5x2 button:focus-visible{outline:3px solid var(--acc);outline-offset:1px}
+#c5x2 button{margin-top:16px;width:100%;font:inherit;font-weight:700;font-size:1rem;padding:12px;border:0;border-radius:4px;background:var(--acc);color:#fff;cursor:pointer}
+#c5x2 button:hover{background:#094a6e}
+#c5x2 .err{color:#a32020;font-size:.9rem;min-height:1.2em;margin-top:8px}
+#c5x2 .tw{overflow-x:auto;margin-top:14px}
+#c5x2 .tw{background:linear-gradient(to right,#fff 30%,rgba(255,255,255,0)),linear-gradient(to right,rgba(255,255,255,0),#fff 70%) 100% 0,radial-gradient(farthest-side at 0 50%,rgba(18,35,61,.22),rgba(18,35,61,0)),radial-gradient(farthest-side at 100% 50%,rgba(18,35,61,.22),rgba(18,35,61,0)) 100% 0;background-repeat:no-repeat;background-color:#fff;background-size:40px 100%,40px 100%,14px 100%,14px 100%;background-attachment:local,local,scroll,scroll}
+@media(max-width:560px){
+#c5x2 table:not(.rv){min-width:0}
+#c5x2 table:not(.rv) thead{display:none}
+#c5x2 table:not(.rv),#c5x2 table:not(.rv) tbody,#c5x2 table:not(.rv) tr,#c5x2 table:not(.rv) td{display:block;width:100%}
+#c5x2 table:not(.rv) tr{padding:8px 0;border-bottom:1px solid var(--line)}
+#c5x2 table:not(.rv) td{border:0;padding:3px 8px}
+#c5x2 table:not(.rv) td:first-child{font-weight:700;padding-top:4px}
+#c5x2 table:not(.rv) td[data-l]::before{content:attr(data-l);display:block;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--mut)}
+}
+#c5x2 table.rv{min-width:0;font-size:.84rem}
+#c5x2 table.rv th,#c5x2 table.rv td{padding:8px 6px}
+#c5x2 table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:560px}
+#c5x2 th,#c5x2 td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+#c5x2 thead th{background:var(--soft);font-size:.85rem}
+#c5x2 tr.tot td{font-weight:700;background:var(--soft)}
+#c5x2 .sum{background:var(--soft);border-left:4px solid var(--acc);padding:12px 14px;margin-top:14px;font-size:.95rem}
+#c5x2 .aviso{margin-top:12px;border-left:4px solid var(--warn);background:#fff8e8;padding:10px 12px;font-size:.85rem}
+#c5x2 .hint{font-size:.82rem;color:var(--mut);margin:8px 0 0}
+#c5x2 .fase{background:var(--soft);border-left:4px solid var(--acc);padding:10px 12px;font-size:.9rem;margin:0 0 14px}
+#c5x2 .bdg{display:inline-block;background:var(--acc);color:#fff;border-radius:3px;padding:0 6px;font-size:.72rem;margin-left:4px;white-space:nowrap}
+#c5x2 .note{font-size:.8rem;color:var(--mut);margin-top:16px;border-top:1px solid var(--line);padding-top:10px}
+</style>
+
+<h2>Simulador de horário: como fica a sua jornada</h2>
+<p class="sub">Escolha o tipo da sua escala e veja como ela fica nas fases de 42 horas (16/12/2026) e de 40 horas (16/12/2027).</p>
+<div class="fase" id="c5-fase"></div>
+
+<div class="grp"><label for="c5-esc" style="margin-top:0">Como é a sua escala?</label>
+  <select id="c5-esc">
+    <option value="semana" selected>Semana comum (segunda a sexta, com ou sem sábado)</option>
+    <option value="12x36">12x36 (12 horas de trabalho e 36 de folga)</option>
+    <option value="24x48">24x48 (24 horas de trabalho e 48 de folga)</option>
+    <option value="2x2">2x2 (dois dias de trabalho e dois de folga)</option>
+    <option value="1x1">1x1 (um dia de trabalho e um de folga)</option>
+    <option value="6x2">6x2 (seis dias de trabalho e dois de folga)</option>
+    <option value="4x2">4x2 (quatro dias de trabalho e dois de folga)</option>
+    <option value="t6">Turno de 6 horas em revezamento (6x1)</option>
+    <option value="e14">Embarcado 14x14</option>
+    <option value="e21">Embarcado 21x21</option>
+    <option value="e28">Embarcado 28x28</option>
+    <option value="outra">Outra escala de revezamento</option>
+  </select>
+</div>
+
+<div id="c5-rev" hidden>
+  <div class="grp"><h3>Dados da sua escala</h3><div class="g3">
+    <div><label for="c5-rn">Dias seguidos de trabalho</label><input id="c5-rn" type="number" inputmode="decimal" min="0.5" step="0.5"></div>
+    <div><label for="c5-rh">Horas por dia de trabalho</label><input id="c5-rh" type="number" inputmode="decimal" min="1" max="24" step="0.25"></div>
+    <div><label for="c5-rm">Dias seguidos de folga</label><input id="c5-rm" type="number" inputmode="decimal" min="0.5" step="0.5"></div>
+  </div><p class="hint">Valores sugeridos para a escala escolhida; ajuste para o seu caso. Conte em dias do calendário: na 12x36, por exemplo, há um dia de plantão e um dia sem plantão. Use as horas efetivas de trabalho, sem contar o intervalo.</p></div>
+</div>
+
+<div id="c5-sem">
+<div class="sws">
+  <label class="sw"><input type="checkbox" id="c5-t1" role="switch"><span class="trk"></span><span>Horário diferente só na sexta</span></label>
+  <label class="sw"><input type="checkbox" id="c5-t2" role="switch"><span class="trk"></span><span>Horário diferente em cada dia da semana</span></label>
+</div>
+
+<div id="c5-days"></div>
+
+<div class="grp"><h3>Sábado</h3>
+  <label for="c5-sw">Como é o sábado hoje?</label>
+  <select id="c5-sw"><option value="nao" selected>Não trabalho</option><option value="normal">Trabalho e faz parte da jornada normal</option><option value="extra">Trabalho e é hora extra</option></select>
+  <div class="g3" id="c5-sab" hidden>
+    <div><label for="c5-ce">Entrada</label><input id="c5-ce" type="time" value="08:00"></div>
+    <div><label for="c5-cs">Saída</label><input id="c5-cs" type="time" value="12:00"></div>
+    <div><label for="c5-ci">Intervalo</label><select id="c5-ci"></select></div>
+  </div>
+</div>
+
+</div>
+
+<button type="button" id="c5-go">Simular horário</button>
+<div class="err" id="c5-err" role="alert"></div>
+<div id="c5-res" aria-live="polite"></div>
+
+<div class="note" id="c5-n1"><p><b>Simulação informativa.</b></p><ul><li>Mantemos o horário de entrada.</li><li>Reduzimos todos os dias na mesma proporção, ajustando só a saída.</li><li>Quem define a distribuição real é o empregador, respeitando a lei e o acordo ou convenção coletiva da sua categoria.</li><li>Baseada na EC 141/2026 e na decisão do ministro Flávio Dino nas ADIs 8.041 e 8.042 (12/11/2026), sujeita a referendo do plenário do STF.</li><li>Não considera turnos, escalas 12x36 nem adicional noturno.</li><li>Não considera a regra para quem tem diploma superior e remuneração acima de 2,5 vezes o teto do INSS.</li><li>Os dados ficam no seu navegador.</li></ul></div>
+<div class="note" id="c5-n2" hidden><p><b>Cálculo informativo de médias.</b></p><ul><li>É feito sobre o ciclo completo da escala (dias de trabalho mais dias de folga).</li><li>Não é um parecer sobre a validade da escala.</li><li>A validade depende de lei, acordo ou convenção coletiva da sua categoria.</li><li>Depende também da regulamentação da EC 141/2026, que ainda pode mudar.</li><li>A decisão do ministro Flávio Dino nas ADIs 8.041 e 8.042 está sujeita a referendo do plenário do STF.</li><li>Os dados ficam no seu navegador.</li></ul></div>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var hj=new Date(),ymd=hj.getFullYear()+"-"+("0"+(hj.getMonth()+1)).slice(-2)+"-"+("0"+hj.getDate()).slice(-2);
+  var FZ=ymd<"2026-12-16"?0:(ymd<"2027-12-16"?1:2);
+  var B=function(i){return FZ===i?' <span class="bdg">em vigor hoje</span>':""};
+  var DL=function(i){return ' data-l="'+["Antes da mudança (até 15/12/2026)","A partir de 16/12/2026","A partir de 16/12/2027"][i]+(FZ===i?" · em vigor hoje":"")+'"'};
+  $("c5-fase").textContent=ymd<"2026-12-16"?"Hoje ainda vale o limite de 44 horas. A nova regra começa em 16/12/2026, com limite de 42 horas e dois dias de repouso.":(ymd<"2027-12-16"?"Em vigor desde 16/12/2026: limite de 42 horas semanais e dois dias de repouso. A fase de 40 horas começa em 16/12/2027.":"Em vigor desde 16/12/2027: limite de 40 horas semanais e dois dias de repouso.");
+  var NM=["Segunda","Terça","Quarta","Quinta","Sexta"];
+  var O=[[0,"Sem intervalo"],[30,"30 minutos"],[60,"1 hora"],[90,"1 hora e 30 minutos"],[120,"2 horas"],[150,"2 horas e 30 minutos"],[180,"3 horas"],[210,"3 horas e 30 minutos"],[240,"4 horas"]];
+  var opts=O.map(function(o){return '<option value="'+o[0]+'"'+(o[0]===60?" selected":"")+">"+o[1]+"</option>"}).join("");
+  var h="",i,touched=[];
+  for(i=0;i<5;i++){
+    h+='<div class="grp" id="c5-g'+i+'"><h3 id="c5-h'+i+'"></h3><div class="g3">'+
+      '<div><label for="c5-e'+i+'">Entrada</label><input id="c5-e'+i+'" type="time" value="08:00"></div>'+
+      '<div><label for="c5-s'+i+'">Saída</label><input id="c5-s'+i+'" type="time" value="17:48"></div>'+
+      '<div><label for="c5-i'+i+'">Intervalo</label><select id="c5-i'+i+'">'+opts+'</select></div></div></div>';
+    touched.push(false);
+  }
+  $("c5-days").innerHTML=h;
+  $("c5-ci").innerHTML=opts;
+  function mode(){return $("c5-t2").checked?2:($("c5-t1").checked?1:0)}
+  function layout(){
+    var m=mode(),vis=m===0?[0]:(m===1?[0,4]:[0,1,2,3,4]);
+    var lab=m===0?["Segunda a sexta"]:(m===1?["Segunda a quinta","Sexta-feira"]:["Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira"]);
+    for(var i=0;i<5;i++){
+      var k=vis.indexOf(i);
+      $("c5-g"+i).hidden=k<0;
+      if(k>=0){
+        $("c5-h"+i).textContent=lab[k];
+        if(i>0&&!touched[i]){$("c5-e"+i).value=$("c5-e0").value;$("c5-s"+i).value=$("c5-s0").value;$("c5-i"+i).value=$("c5-i0").value}
+      }
+    }
+    $("c5-t1").disabled=(m===2);
+    $("c5-t1").parentNode.style.opacity=(m===2)?".5":"1";
+  }
+  for(i=1;i<5;i++){(function(j){["e","s","i"].forEach(function(p){
+    $("c5-"+p+j).addEventListener("input",function(){touched[j]=true});
+    $("c5-"+p+j).addEventListener("change",function(){touched[j]=true});
+  })})(i)}
+  $("c5-t1").addEventListener("change",layout);
+  $("c5-t2").addEventListener("change",function(){if($("c5-t2").checked)$("c5-t1").checked=false;layout()});
+  $("c5-sw").addEventListener("change",function(){$("c5-sab").hidden=($("c5-sw").value==="nao")});
+  layout();
+  function hm(m){m=Math.round(m);var h=Math.floor(m/60),r=m%60;return h+"h"+(r?(r<10?"0":"")+r:"")}
+  function toMin(v){var p=v.split(":");return +p[0]*60+ +p[1]}
+  function clock(m){m=((Math.round(m)%1440)+1440)%1440;var h=Math.floor(m/60),r=m%60;return (h<10?"0":"")+h+":"+(r<10?"0":"")+r}
+  function dur(e,s,iv){var a=toMin(e),b=toMin(s);if(b<=a)b+=1440;return b-a-iv}
+  var PRE={"12x36":[1,12,1],"24x48":[1,24,2],"2x2":[2,12,2],"1x1":[1,12,1],"6x2":[6,8,2],"4x2":[4,8,2],"t6":[6,6,1],"e14":[14,12,14],"e21":[21,12,21],"e28":[28,12,28]};
+  var NOTA={
+    "12x36":"A emenda não cita a 12x36 e não altera o art. 59-A da CLT. A média de 42 horas cabe no limite de 16/12/2026, mas passa do limite de 16/12/2027. Ainda não está definido como os dias sem plantão se encaixam nos dois repousos semanais; o tema depende de negociação coletiva, de regulamentação e de decisões da Justiça.",
+    "24x48":"Escalas de 24 horas somam muito mais que 40 horas na média. A 24x48 não tem previsão expressa na CLT e costuma depender de norma setorial ou coletiva; a emenda não trata dela de forma expressa.",
+    "t6":"Os turnos ininterruptos de revezamento têm jornada de 6 horas, salvo negociação coletiva (art. 7º, XIV, da Constituição, mantido pela emenda). Jornadas de até 40 horas não sofrem redução proporcional (art. 4º da emenda), mas passa a valer o direito a dois repousos semanais.",
+    "emb":"A emenda não traz ressalva expressa para o trabalho embarcado. Escalas como 14x14, 21x21 e 28x28 costumam se apoiar em lei especial (como a Lei 5.811/1972, para petroleiros) ou em acordo coletivo, e a emenda admite regime compensatório coletivo (art. 7º, §2º) e lei para regimes diferenciados (§3º). Noticiou-se a elaboração de uma nova PEC com exceções para embarcados, mas não confirmei se ela foi apresentada.",
+    "rev":"Escalas de revezamento dependem de acordo ou convenção coletiva. A emenda admite que a negociação coletiva estabeleça regime compensatório (art. 7º, §2º) e prevê lei para regimes diferenciados (§3º)."
+  };
+  $("c5-esc").addEventListener("change",function(){
+    var k=$("c5-esc").value,rev=k!=="semana";
+    $("c5-rev").hidden=!rev;$("c5-sem").hidden=rev;$("c5-n1").hidden=rev;$("c5-n2").hidden=!rev;
+    $("c5-err").textContent="";$("c5-res").innerHTML="";
+    if(PRE[k]){$("c5-rn").value=PRE[k][0];$("c5-rh").value=PRE[k][1];$("c5-rm").value=PRE[k][2]}
+  });
+  function calcRev(){
+    var k=$("c5-esc").value,err=$("c5-err"),res=$("c5-res");err.textContent="";res.innerHTML="";
+    var n=parseFloat($("c5-rn").value),h=parseFloat($("c5-rh").value),r=parseFloat($("c5-rm").value);
+    if(!(n>0)||!(h>0)||!(r>0)){err.textContent="Preencha os dias de trabalho, as horas por dia e os dias de folga.";return}
+    if(h>24){err.textContent="As horas por dia de trabalho não podem passar de 24.";return}
+    var cyc=n+r,sem=n*h*7/cyc*60,folga=r*7/cyc,fmt=function(x){return x.toFixed(1).replace(".",",")};
+    var L=[["Até 15/12/2026",2640],["De 16/12/2026 a 15/12/2027",2520],["A partir de 16/12/2027",2400]];
+    var rows=L.map(function(x,ix){var d=sem-x[1];return "<tr><td>"+x[0]+B(ix)+"</td><td>"+hm(x[1])+"</td><td>"+hm(sem)+"</td><td>"+(d>0.5?"acima em "+hm(d):"dentro do limite")+"</td></tr>"}).join("");
+    var cards='<div class="sum">Média de trabalho: <b>'+hm(sem)+' por semana</b>, em ciclos de '+fmt(cyc)+' dias. Dias sem trabalho: <b>'+fmt(folga)+' por semana</b> em média (a emenda prevê dois repousos semanais).</div>';
+    var msg=sem>2400?"Para caber em 40 horas mantendo os mesmos dias de trabalho e de folga, cada dia de trabalho teria cerca de "+hm(2400*cyc/(n*7))+" (hoje "+hm(h*60)+"). É só uma conta de referência, não uma proposta de escala.":"A média semanal já cabe no limite de 40 horas.";
+    var a="";
+    if(folga<2){a+='<div class="aviso">Em média há menos de 2 dias sem trabalho por semana. A emenda admite que acordo ou convenção coletiva assegure, na média, dois repousos semanais dentro do mês, garantido pelo menos um repouso dentro de cada semana de trabalho (art. 7º, §2º).</div>'}
+    if(n>6){a+='<div class="aviso">A escala tem mais de 6 dias seguidos de trabalho. Esse é um ponto de atenção diante da regra de pelo menos um repouso dentro de cada semana de trabalho; a solução depende de lei especial, acordo coletivo ou regulamentação.</div>'}
+    var nk=k.charAt(0)==="e"&&k!=="e"?"emb":(NOTA[k]?k:"rev");
+    a+='<div class="aviso">'+NOTA[nk]+'</div>';
+    res.innerHTML='<div class="tw"><table class="rv"><thead><tr><th>Período</th><th>Limite semanal</th><th>Sua média</th><th>Situação</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+cards+'<p class="hint">'+msg+'</p>'+a;
+  }
+  function calc(){
+    if($("c5-esc").value!=="semana"){calcRev();return}
+    var err=$("c5-err"),res=$("c5-res");err.textContent="";res.innerHTML="";
+    var m=mode(),sw=$("c5-sw").value,src=function(i){return m===0?0:(m===1?(i===4?4:0):i)};
+    var used=m===0?[0]:(m===1?[0,4]:[0,1,2,3,4]);
+    for(var k=0;k<used.length;k++){if(!$("c5-e"+used[k]).value||!$("c5-s"+used[k]).value){err.textContent="Informe a entrada e a saída de todos os dias exibidos.";return}}
+    var d=[],E=[],S=[],V=[],i;
+    for(i=0;i<5;i++){var j=src(i);E[i]=$("c5-e"+j).value;S[i]=$("c5-s"+j).value;V[i]=+$("c5-i"+j).value;d[i]=dur(E[i],S[i],V[i]);if(d[i]<=0){err.textContent="O intervalo é maior que o tempo entre a entrada e a saída.";return}}
+    var ce=$("c5-ce").value,cs=$("c5-cs").value,i3=+$("c5-ci").value,sb=0;
+    if(sw!=="nao"){if(!ce||!cs){err.textContent="Informe a entrada e a saída do sábado.";return}sb=dur(ce,cs,i3);if(sb<=0){err.textContent="O intervalo do sábado é maior que o tempo trabalhado.";return}}
+    var base5=d.reduce(function(a,b){return a+b},0),T=base5+(sw==="normal"?sb:0);
+    function fase(lim){var W=Math.min(T,lim),q=[],s=0;for(var i=0;i<4;i++){q[i]=Math.round(d[i]*W/base5);s+=q[i]}q[4]=W-s;return {W:W,q:q}}
+    var f1=fase(2520),f2=fase(2400);
+    var cell=function(e,sai,x){return clock(toMin(e))+" às "+sai+" ("+hm(x)+")"};
+    var lines=[];
+    for(i=0;i<5;i++){lines.push([cell(E[i],clock(toMin(S[i])),d[i]),cell(E[i],clock(toMin(E[i])+f1.q[i]+V[i]),f1.q[i]),cell(E[i],clock(toMin(E[i])+f2.q[i]+V[i]),f2.q[i])])}
+    var rows="",a0=0;
+    while(a0<5){
+      var a1=a0;
+      while(a1+1<5&&lines[a1+1].join("|")===lines[a0].join("|"))a1++;
+      var lb=a0===a1?NM[a0]+"-feira":NM[a0]+" a "+NM[a1].toLowerCase();
+      rows+="<tr><td>"+lb+"</td><td"+DL(0)+">"+lines[a0][0]+"</td><td"+DL(1)+">"+lines[a0][1]+"</td><td"+DL(2)+">"+lines[a0][2]+"</td></tr>";
+      a0=a1+1;
+    }
+    if(sw!=="nao"){rows+="<tr><td>Sábado</td><td"+DL(0)+">"+cell(ce,clock(toMin(cs)),sb)+(sw==="extra"?" (hora extra)":"")+"</td><td"+DL(1)+">Descanso</td><td"+DL(2)+">Descanso</td></tr>"}
+    rows+='<tr class="tot"><td>Total semanal da jornada normal</td><td'+DL(0)+'>'+hm(T)+"</td><td"+DL(1)+">"+hm(f1.W)+"</td><td"+DL(2)+">"+hm(f2.W)+"</td></tr>";
+    var ganho=T-f2.W,msg;
+    if(ganho>0){msg="Em 16/12/2027 você passa a trabalhar "+hm(ganho)+" a menos por semana (cerca de "+Math.round(ganho*52/60)+" horas por ano), com dois dias de descanso por semana, sem redução de salário."}
+    else{msg="Sua jornada semanal já está dentro do limite de 40 horas, então ela não diminui. O que muda é o direito a dois dias de descanso por semana."}
+    var m1=Math.max.apply(null,f1.q),m2=Math.max.apply(null,f2.q),a="";
+    if(m1>504){a+='<div class="aviso">Na fase de 42 horas, algum dia passa de 8h24. Isso depende de acordo ou convenção coletiva; sem eles, a decisão provisória do STF admite no máximo 8h24 por dia.</div>'}
+    else if(m1>480){a+='<div class="aviso">Na fase de 42 horas há dias acima de 8 horas. Sem acordo ou convenção coletiva até 15/12/2026, a decisão provisória do STF admite até 8h24 por dia, sem adicional sobre os 24 minutos, até 15/12/2027.</div>'}
+    if(m2>480){a+='<div class="aviso">Na fase de 40 horas, a Constituição fixa o limite de 8 horas por dia, admitida a compensação de horários mediante acordo ou convenção coletiva. Dias acima de 8 horas dependem disso.</div>'}
+    if(sw==="normal"){a+='<div class="aviso">O sábado passa a ser dia de descanso. Nesta simulação, as horas dele foram redistribuídas de segunda a sexta.</div>'}
+    if(sw==="extra"){a+='<div class="aviso">O sábado passa a ser um dos dois dias de descanso. Trabalho nesse dia depende das regras da emenda e do seu acordo coletivo, e não é simulado aqui.</div>'}
+    res.innerHTML='<div class="tw"><table><thead><tr><th>Dia</th><th>Antes da mudança (até 15/12/2026)'+B(0)+'</th><th>A partir de 16/12/2026'+B(1)+'</th><th>A partir de 16/12/2027'+B(2)+'</th></tr></thead><tbody>'+rows+"</tbody></table></div><div class=\"sum\">"+msg+"</div>"+a;
+  }
+  $("c5-go").addEventListener("click",calc);
+})();
+</script>
+</div>
+</div>
+<div class="adslot" aria-label="Publicidade">
+<!-- ESPAÇO PARA ANÚNCIO ADSENSE -->
+<!-- (FINAL) Para ativar um bloco manual, crie uma unidade no AdSense e cole aqui:
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6577857913707933" data-ad-slot="SEU_ID_DO_BLOCO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> -->
+</div>
+
+</main>
+<section class="pg" id="p-sobre" hidden><a class="back" href="#">← Voltar às calculadoras</a>
+<h1>Sobre o site</h1>
+<p>Este é um site <b>informativo e gratuito</b> sobre o fim da escala 6x1 no Brasil, criado pela Emenda Constitucional nº 141/2026, promulgada em 16 de outubro de 2026.</p>
+<h2>O que a emenda muda</h2>
+<ul><li>Garante dois dias de repouso semanal remunerado, um deles preferencialmente no domingo.</li>
+<li>Reduz o limite de jornada de 44 para 42 horas semanais a partir de 16/12/2026.</li>
+<li>Reduz o limite para 40 horas semanais a partir de 16/12/2027.</li>
+<li>Não permite redução de salário.</li>
+<li>Admite, em casos excepcionais, regime compensatório por acordo ou convenção coletiva.</li></ul>
+<h2>O que oferecemos</h2>
+<ul><li>Contagem regressiva para cada etapa.</li>
+<li>Calculadora do valor da hora e das horas extras.</li>
+<li>Simulador de horário e de escalas de revezamento.</li></ul>
+<h2>Nosso compromisso</h2>
+<p>Buscamos explicar a regra com clareza e sem sensacionalismo, citando a fonte e avisando quando algo ainda depende de regulamentação, de acordo coletivo ou de decisão do Supremo Tribunal Federal. O site é independente: <b>não é um canal oficial do governo</b>, de sindicato ou de empresa.</p>
+<p>Encontrou um erro ou tem uma sugestão? Fale pela página de <a href="#contato">Contato</a>.</p>
+<p>O site é mantido com a exibição de anúncios, conforme a <a href="#privacidade">Política de Privacidade</a>.</p>
+</section>
+<section class="pg" id="p-contato" hidden><a class="back" href="#">← Voltar às calculadoras</a>
+<h1>Contato</h1>
+<p>Use o formulário abaixo ou escreva diretamente para <a class="cfg-mail" href="#"></a>. Respondemos assim que possível.</p>
+<form id="fc" novalidate>
+<label for="fc-n">Seu nome</label><input id="fc-n" type="text" autocomplete="name">
+<label for="fc-e">Seu e-mail</label><input id="fc-e" type="email" autocomplete="email">
+<label for="fc-m">Mensagem</label><textarea id="fc-m" rows="6"></textarea>
+<p class="hint">Não envie dados sensíveis nem documentos pessoais. Ao enviar, abriremos o seu aplicativo de e-mail com a mensagem pronta.</p>
+<button type="submit">Enviar mensagem</button><div class="err" id="fc-err" role="alert"></div>
+</form>
+<p>Seus dados são usados somente para responder. Veja a <a href="#privacidade">Política de Privacidade</a>.</p>
+<p><b>Importante:</b> não prestamos consultoria trabalhista. Para o seu caso concreto, procure o seu sindicato, o RH da empresa ou um advogado trabalhista.</p>
+</section>
+<section class="pg" id="p-privacidade" hidden><a class="back" href="#">← Voltar às calculadoras</a>
+<h1>Política de Privacidade</h1>
+<p class="upd">Vigência e última atualização: 16 de novembro de 2026.</p>
+<p>Esta Política explica, em linguagem simples, como este site trata informações e como cumpre a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD). Ao usar o site, você declara ter lido este texto.</p>
+<h2>1. Quem é o responsável</h2>
+<p>O responsável (controlador) por este site é <b class="cfg-resp"></b>. Contato para qualquer assunto de privacidade: <a class="cfg-mail" href="#"></a>. Esse mesmo canal atende como encarregado pelo tratamento de dados pessoais (art. 41 da LGPD).</p>
+<h2>2. Quais dados tratamos</h2>
+<ul><li><b>Cálculos das ferramentas.</b> Salário, jornada, horários e demais valores digitados nas calculadoras são processados somente no seu aparelho, pelo navegador. Eles não são enviados nem armazenados em nosso servidor.</li>
+<li><b>Sem cadastro.</b> O site não exige conta, login nem documentos.</li>
+<li><b>Dados sensíveis.</b> Não coletamos dados pessoais sensíveis (como saúde, religião, origem racial ou opinião política). Pedimos que você não os inclua em mensagens enviadas pelo formulário de contato.</li>
+<li><b>Contato.</b> Se você nos escrever, receberemos o nome, o e-mail e a mensagem que você informar. Usamos esses dados apenas para responder.</li>
+<li><b>Dados de acesso.</b> Como em qualquer site, o servidor de hospedagem pode registrar automaticamente dados técnicos, como endereço IP, tipo de navegador, páginas acessadas e data e hora, por razões de segurança e funcionamento.</li></ul>
+<h2>3. Cookies</h2>
+<p>Cookies são pequenos arquivos gravados no seu navegador. Este site pode usar cookies e tecnologias semelhantes para funcionamento, medição de audiência e exibição de anúncios. Você pode apagar ou bloquear cookies nas configurações do seu navegador. Bloquear alguns cookies pode afetar a exibição dos anúncios, mas não impede o uso das calculadoras.</p>
+<h2>4. Publicidade e Google AdSense</h2>
+<p>Este site exibe anúncios do Google AdSense. Veja o que isso significa:</p>
+<ul><li>Fornecedores terceiros, incluindo o Google, usam cookies para veicular anúncios com base em visitas anteriores do usuário a este site ou a outros sites.</li>
+<li>O uso de cookies de publicidade permite que o Google e seus parceiros exibam anúncios para você com base nas suas visitas a este e a outros sites na internet.</li>
+<li>Os anúncios podem ser <b>personalizados</b> (baseados nos seus interesses) ou <b>não personalizados</b> (baseados, por exemplo, no conteúdo da página e na localização aproximada).</li>
+<li>Você pode desativar a personalização de anúncios em <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">https://www.google.com/settings/ads</a>.</li>
+<li>Você também pode visitar <a href="https://www.aboutads.info" target="_blank" rel="noopener">www.aboutads.info</a> para desativar o uso de cookies de publicidade personalizada de alguns fornecedores terceiros.</li>
+<li>Para saber como o Google usa informações de sites que utilizam seus serviços, acesse <a href="https://policies.google.com/technologies/partner-sites?hl=pt-BR" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a>.</li>
+<li>O Google informa que não usa categorias sensíveis, como saúde, raça, religião ou orientação sexual, para personalizar anúncios.</li></ul>
+<p>Não controlamos os cookies de terceiros nem os dados que eles coletam. O tratamento feito pelo Google segue a política de privacidade do próprio Google.</p>
+<h2>5. Para que usamos os dados e em que base legal</h2>
+<ul><li>Responder mensagens de contato: execução de medidas a pedido do titular e legítimo interesse (art. 7º, V e IX).</li>
+<li>Segurança e funcionamento do site: legítimo interesse (art. 7º, IX).</li>
+<li>Cookies que não sejam estritamente necessários, inclusive de publicidade: consentimento (art. 7º, I), quando exigido, que você pode revogar a qualquer momento.</li></ul>
+<h2>6. Compartilhamento e transferência internacional</h2>
+<p>Não vendemos dados pessoais. Dados técnicos podem ser tratados por prestadores que viabilizam o site, como a hospedagem e o Google (AdSense). O Google pode tratar dados em servidores fora do Brasil, conforme o art. 33 da LGPD e as políticas do próprio Google.</p>
+<h2>7. Por quanto tempo guardamos</h2>
+<p>Mensagens de contato são mantidas pelo tempo necessário para responder e para cumprir obrigações legais, e depois eliminadas. Registros técnicos seguem o prazo do provedor de hospedagem.</p>
+<h2>8. Seus direitos</h2>
+<p>Pelo art. 18 da LGPD, você pode pedir: confirmação do tratamento; acesso; correção de dados; anonimização, bloqueio ou eliminação; portabilidade; informação sobre com quem os dados são compartilhados; e revogação do consentimento. Você também pode se opor a tratamentos feitos sem consentimento. Para exercer esses direitos, escreva para o contato acima. Se entender que seus direitos não foram respeitados, você pode reclamar à Autoridade Nacional de Proteção de Dados (ANPD), em <a href="https://www.gov.br/anpd" target="_blank" rel="noopener">gov.br/anpd</a>.</p>
+<h2>9. Crianças e adolescentes</h2>
+<p>O site é voltado a trabalhadores e empregadores e não é dirigido a crianças. Não coletamos intencionalmente dados de crianças.</p>
+<h2>10. Segurança</h2>
+<p>Adotamos medidas razoáveis para proteger as informações. Como o cálculo é feito no seu aparelho, os valores digitados não trafegam para nós. Nenhum sistema, porém, é totalmente livre de risco.</p>
+<h2>11. Links externos</h2>
+<p>O site pode apontar para páginas de terceiros, como órgãos públicos e notícias. Cada site tem a sua própria política de privacidade.</p>
+<h2>12. Mudanças nesta Política</h2>
+<p>Podemos atualizar este texto. A versão vigente é sempre a publicada nesta página, com a data no topo. Mudanças relevantes serão destacadas no site.</p>
+<h2>13. Fale conosco</h2>
+<p>Dúvidas sobre privacidade? Escreva para <a class="cfg-mail" href="#"></a> ou use a página de <a href="#contato">Contato</a>.</p>
+</section>
+<section class="pg" id="p-termos" hidden><a class="back" href="#">← Voltar às calculadoras</a>
+<h1>Termos de Uso</h1>
+<p class="upd">Vigência e última atualização: 16 de novembro de 2026.</p>
+<h2>1. Aceitação</h2>
+<p>Ao acessar este site, você concorda com estes Termos e com a <a href="#privacidade">Política de Privacidade</a>. Se não concordar, não use o site.</p>
+<h2>2. Natureza informativa</h2>
+<p>As calculadoras, a contagem regressiva e o simulador são <b>simulações informativas</b>, baseadas no texto da Emenda Constitucional nº 141/2026 e em informações públicas. Elas não são parecer jurídico, contábil ou sindical.</p>
+<h2>3. Sem garantia de resultado trabalhista</h2>
+<ul><li>Não garantimos que os resultados correspondam ao que você receberá ou terá direito.</li>
+<li>A regra real é definida pelo empregador, respeitando a Constituição, a lei, a regulamentação e o acordo ou convenção coletiva da sua categoria.</li>
+<li>Alguns pontos ainda dependem de regulamentação e de decisões da Justiça, inclusive do Supremo Tribunal Federal. Os resultados podem mudar.</li>
+<li>Regimes especiais, categorias com lei própria e a regra para quem tem diploma superior e remuneração elevada (art. 8º da emenda) podem alterar o cálculo.</li></ul>
+<h2>4. Responsabilidade</h2>
+<p>Você é responsável pelo uso que fizer das informações. Na máxima extensão permitida em lei, não nos responsabilizamos por decisões tomadas com base no site, nem por eventuais erros, omissões ou indisponibilidade. Para decisões importantes, consulte o seu sindicato, o RH ou um advogado trabalhista.</p>
+<h2>5. Uso adequado</h2>
+<p>Não é permitido usar o site para fins ilegais, tentar prejudicar seu funcionamento ou copiar o conteúdo em larga escala sem autorização.</p>
+<h2>6. Propriedade intelectual</h2>
+<p>Os textos, o design e o código do site pertencem ao responsável. Você pode citar trechos curtos, indicando a fonte e o endereço do site.</p>
+<h2>7. Publicidade e links</h2>
+<p>O site exibe anúncios de terceiros, como o Google AdSense. Não endossamos os anunciantes nem respondemos por seus produtos e serviços. Links externos são oferecidos por conveniência.</p>
+<h2>8. Alterações</h2>
+<p>Podemos alterar estes Termos e o conteúdo do site a qualquer momento. A versão vigente é a publicada nesta página.</p>
+<h2>9. Lei aplicável</h2>
+<p>Estes Termos são regidos pelas leis do Brasil. Dúvidas ou reclamações: <a href="#contato">Contato</a>.</p>
+</section>
+</div>
+<footer>
+<nav aria-label="Páginas do site"><a href="#sobre">Sobre</a><a href="#contato">Contato</a><a href="#privacidade">Política de Privacidade</a><a href="#termos">Termos de Uso</a></nav>
+<div>© 2026 Fim da escala 6x1. Site informativo e independente, sem vínculo com o governo.</div>
+<div>Simulações sem valor jurídico. Baseado na EC 141/2026.</div>
+</footer>
+<script>
+/* ===== CONFIGURE AQUI antes de publicar ===== */
+var CFG={email:"contato@seudominio.com.br",resp:"[NOME OU RAZÃO SOCIAL DO RESPONSÁVEL]"};
+(function(){
+  var q=function(s){return document.querySelectorAll(s)};
+  [].forEach.call(q(".cfg-resp"),function(e){e.textContent=CFG.resp});
+  [].forEach.call(q(".cfg-mail"),function(e){e.textContent=CFG.email;e.href="mailto:"+CFG.email});
+  var P={sobre:"Sobre",contato:"Contato",privacidade:"Política de Privacidade",termos:"Termos de Uso"},T=document.title;
+  function route(){
+    var h=location.hash.slice(1),pg=P[h]?h:"";
+    document.getElementById("home").hidden=!!pg;
+    for(var k in P)document.getElementById("p-"+k).hidden=(k!==pg);
+    if(pg){document.title=P[pg]+" | Fim da escala 6x1";window.scrollTo(0,0)}else{document.title=T;if(!h)window.scrollTo(0,0)}
+  }
+  window.addEventListener("hashchange",route);route();
+  document.getElementById("fc").addEventListener("submit",function(ev){
+    ev.preventDefault();
+    var n=document.getElementById("fc-n").value.trim(),e=document.getElementById("fc-e").value.trim(),m=document.getElementById("fc-m").value.trim(),er=document.getElementById("fc-err");
+    if(!n||!/^\S+@\S+\.\S+$/.test(e)||!m){er.textContent="Preencha nome, um e-mail válido e a mensagem.";return}
+    er.textContent="";
+    location.href="mailto:"+CFG.email+"?subject="+encodeURIComponent("Contato pelo site - "+n)+"&body="+encodeURIComponent(m+"\n\nNome: "+n+"\nE-mail: "+e);
+  });
+})();
+</script>
+</body>
+</html>
